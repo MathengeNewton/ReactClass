@@ -1,21 +1,18 @@
-import { useState } from 'react'
-import './App.css'
-import HomeUpdate from './OurNewComponent';
+import React from 'react';
+import './App.css';
+import About from './pages/About.tsx';
+import Login from './pages/login.tsx';
+import HomeComponent from './pages/index.tsx';
+import { Routes, Route } from 'react-router-dom';
+
 
 function App() {
-  const [count, setCount] = useState(0);
-
-  const hancleClick =()=> {
-    setCount(count+1);
-  }
-
   return (
-    <>
-      <HomeUpdate 
-        ourState={count} 
-        handleClick={hancleClick} 
-      />
-    </>
+    <Routes>
+      <Route path="/" element={<HomeComponent />} />
+      <Route path="/about" element={<About />} />
+      <Route path="/login" element={<Login />} />
+    </Routes>
   )
 }
 
