@@ -10,7 +10,12 @@ const initialState = {
 
 const authReducer =(state = initialState, action:AuthType  ) =>{
     switch(action.isLoggedIn){
-        // Do something here
+        case true:
+            return {
+                ...state,
+                isAuthenticated: action.isLoggedIn,
+                name: action.name,
+            }
         default:
             return state;
     }

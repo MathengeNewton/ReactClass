@@ -19,6 +19,10 @@ function Layout(){
                         </li>
                     </ul>
                 </nav>
+                <div>
+                    {/* <div className="">{name}</div>
+                    <div className="">{login_state} </div> */}
+                </div>
             </header>
             <main>
                 <Outlet />
