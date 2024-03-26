@@ -9,8 +9,8 @@ function Login(){
 
     return(
         <div>
-            <form>
-                <input type="email" name="email" required/>
+            <form className="text-black">
+                <input type="email"  name="email" required/>
                 <input type="password" name="password" required/>
                 <button>Submit</button>
             </form>
